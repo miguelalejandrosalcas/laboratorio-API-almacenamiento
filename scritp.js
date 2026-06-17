@@ -25,6 +25,8 @@ function saveFavorite() {
 
   favoritos.push(pokemonActual);
 
+  updateFavoritesList();
+
   localStorage.setItem("favoritos", JSON.stringify(favoritos));
 
   alert("Pokémon guardado en favoritos");
