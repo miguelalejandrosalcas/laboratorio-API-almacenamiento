@@ -95,7 +95,7 @@ function updateFavoritesList() {
 
     let contenedor = document.getElementById('favoritos');
 
-    let pokemonGuardados = JSON.parse(localStorage.getItem('Favoritos'));
+    let pokemonGuardados = JSON.parse(localStorage.getItem('favoritos'));
 
     pokemonGuardados.innerHTML = "";
 
