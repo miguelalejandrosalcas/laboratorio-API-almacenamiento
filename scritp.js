@@ -1,4 +1,3 @@
-let pokemonActual = null;
 
 function saveFavorite() {
   if (pokemonActual === null) {
@@ -25,10 +24,13 @@ function saveFavorite() {
 
   favoritos.push(pokemonActual);
 
-  updateFavoritesList();
+  //updateFavoritesList();
 
   localStorage.setItem("favoritos", JSON.stringify(favoritos));
 
   alert("Pokémon guardado en favoritos");
 }
 
+function updateFavoritesList() {
+    
+}
