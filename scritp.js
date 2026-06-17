@@ -126,19 +126,22 @@ function updateFavoritesList() {
 
     let contenedor = document.getElementById('favoritos');
 
-    let pokemonGuardados = JSON.parse(localStorage.getItem('favoritos'));
+    let pokemonGuardados = JSON.parse(localStorage.getItem('favoritos')) || [];;
 
-    pokemonGuardados.innerHTML = "";
+    contenedor.innerHTML = "";
 
     pokemonGuardados.forEach(pokemon => {
 
         let tarjeta = document.createElement("div");
 
         tarjeta.innerHTML = `
-            <img src="${pokemon.image}">
-            <p>${pokemon.name}</p>
+            <img src="${pokemon.imagen}">
+            <p>${pokemon.nombre}</p>
         `;
 
         contenedor.appendChild(tarjeta);
     });
 }
+
+
+updateFavoritesList();
