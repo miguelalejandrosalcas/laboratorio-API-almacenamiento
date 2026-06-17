@@ -87,3 +87,27 @@ function searchPokemon() {
 //         console.log("No sse ingresó ningún nombre de personaje");
 //     }
 // }
+
+
+
+
+function updateFavoritesList() {
+
+    let contenedor = document.getElementById('favoritos');
+
+    let pokemonGuardados = JSON.parse(localStorage.getItem('Favoritos'));
+
+    pokemonGuardados.innerHTML = "";
+
+    pokemonGuardados.forEach(pokemon => {
+
+        let tarjeta = document.createElement("div");
+
+        tarjeta.innerHTML = `
+            <img src="${pokemon.image}">
+            <p>${pokemon.name}</p>
+        `;
+
+        contenedor.appendChild(tarjeta);
+    });
+}
