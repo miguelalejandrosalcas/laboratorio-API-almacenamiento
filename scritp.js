@@ -115,7 +115,7 @@ function saveFavorite() {
 
   localStorage.setItem("favoritos", JSON.stringify(favoritos));
 
-  //updateFavoritesList();
+  updateFavoritesList();
 
   alert("Pokémon guardado en favoritos");
 }
